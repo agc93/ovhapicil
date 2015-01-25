@@ -34,7 +34,7 @@ namespace OVHApi.Parser
 				                                 "https://api.ovh.com/1.0/license/windows.json",
 				                                 "https://api.ovh.com/1.0/me.json",
 				                                 "https://api.ovh.com/1.0/newAccount.json",
-				                                 "https://api.ovh.com/1.0/order.json",
+				                                 //"https://api.ovh.com/1.0/order.json",// invalid JSON
 				                                 "https://api.ovh.com/1.0/price.json",
 				                                 "https://api.ovh.com/1.0/sms.json",
 				                                 "https://api.ovh.com/1.0/telephony.json",
