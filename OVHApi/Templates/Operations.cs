@@ -8566,7 +8566,7 @@ Ensure.NotNullNorEmpty("serviceName",serviceName);
 							/// <param name="type">To be written</param>
 							/// <param name="serviceName">The internal name of your hosting</param>
 							/// </summary>
-						public async Task<OvhApi.Models.ComplexType.ChartSerie<complexType.ChartTimestampValue>[]> GetHostingWebStatistics(OvhApi.Models.Hosting.Web.StatisticsPeriodEnum period,OvhApi.Models.Hosting.Web.StatisticsTypeEnum type,string serviceName)
+						public async Task<OvhApi.Models.ComplexType.ChartSerie<OvhApi.Models.ComplexType.ChartTimestampValue>[]> GetHostingWebStatistics(OvhApi.Models.Hosting.Web.StatisticsPeriodEnum period,OvhApi.Models.Hosting.Web.StatisticsTypeEnum type,string serviceName)
 		{
 					if(ConsumerKey == null)
 				throw new OvhException("This request must be authenticated");
@@ -8579,7 +8579,7 @@ queryString.Add("period",period);
 queryString.Add("type",type);
 
 			
-			return await RawCall<OvhApi.Models.ComplexType.ChartSerie<complexType.ChartTimestampValue>[]>(HttpMethod.Get,String.Format("/hosting/web/{0}/statistics{1}",System.Net.WebUtility.UrlEncode(serviceName.ToString()),queryString));
+			return await RawCall<OvhApi.Models.ComplexType.ChartSerie<OvhApi.Models.ComplexType.ChartTimestampValue>[]>(HttpMethod.Get,String.Format("/hosting/web/{0}/statistics{1}",System.Net.WebUtility.UrlEncode(serviceName.ToString()),queryString));
 		}
 				/// <summary>
 		/// Allows you to boost your offer.
@@ -9050,7 +9050,7 @@ requestBody.Add("date",date);
 							/// <param name="serviceName">The internal name of your hosting</param>
 							/// <param name="name">Database name</param>
 							/// </summary>
-						public async Task<OvhApi.Models.ComplexType.ChartSerie<complexType.ChartTimestampValue>[]> GetHostingWebDatabaseStatistics(OvhApi.Models.Hosting.Web.StatisticsPeriodEnum period,OvhApi.Models.Hosting.Web.Database.StatisticsTypeEnum type,string serviceName,string name)
+						public async Task<OvhApi.Models.ComplexType.ChartSerie<OvhApi.Models.ComplexType.ChartTimestampValue>[]> GetHostingWebDatabaseStatistics(OvhApi.Models.Hosting.Web.StatisticsPeriodEnum period,OvhApi.Models.Hosting.Web.Database.StatisticsTypeEnum type,string serviceName,string name)
 		{
 					if(ConsumerKey == null)
 				throw new OvhException("This request must be authenticated");
@@ -9064,7 +9064,7 @@ queryString.Add("period",period);
 queryString.Add("type",type);
 
 			
-			return await RawCall<OvhApi.Models.ComplexType.ChartSerie<complexType.ChartTimestampValue>[]>(HttpMethod.Get,String.Format("/hosting/web/{0}/database/{1}/statistics{2}",System.Net.WebUtility.UrlEncode(serviceName.ToString()),System.Net.WebUtility.UrlEncode(name.ToString()),queryString));
+			return await RawCall<OvhApi.Models.ComplexType.ChartSerie<OvhApi.Models.ComplexType.ChartTimestampValue>[]>(HttpMethod.Get,String.Format("/hosting/web/{0}/database/{1}/statistics{2}",System.Net.WebUtility.UrlEncode(serviceName.ToString()),System.Net.WebUtility.UrlEncode(name.ToString()),queryString));
 		}
 				/// <summary>
 		/// Request a password change
@@ -17888,7 +17888,7 @@ queryString.Add("policy",policy);
 							/// <param name="billingAccount">The name of your billingAccount</param>
 							/// <param name="serviceName">To be written</param>
 							/// </summary>
-						public async Task<OvhApi.Models.Telephony.EasyHuntingTimeConditions> CreateTelephonyEasyhuntingTimeconditionsConditions(time timeFrom,time timeTo,OvhApi.Models.Telephony.OvhPabxDialplanExtensionConditionTimeWeekDayEnum weekDay,OvhApi.Models.Telephony.EasyHuntingTimeConditionsPolicyEnum policy,string billingAccount,string serviceName)
+						public async Task<OvhApi.Models.Telephony.EasyHuntingTimeConditions> CreateTelephonyEasyhuntingTimeconditionsConditions(DateTime timeFrom,DateTime timeTo,OvhApi.Models.Telephony.OvhPabxDialplanExtensionConditionTimeWeekDayEnum weekDay,OvhApi.Models.Telephony.EasyHuntingTimeConditionsPolicyEnum policy,string billingAccount,string serviceName)
 		{
 					if(ConsumerKey == null)
 				throw new OvhException("This request must be authenticated");
@@ -18772,7 +18772,7 @@ Ensure.IdIsValid("extensionId",extensionId);
 							/// <param name="dialplanId">To be written</param>
 							/// <param name="extensionId">To be written</param>
 							/// </summary>
-						public async Task<OvhApi.Models.Telephony.OvhPabxDialplanExtensionConditionTime> CreateTelephonyOvhpabxDialplanExtensionConditiontime(time timeFrom,time timeTo,OvhApi.Models.Telephony.OvhPabxDialplanExtensionConditionTimeWeekDayEnum weekDay,string billingAccount,string serviceName,long dialplanId,long extensionId)
+						public async Task<OvhApi.Models.Telephony.OvhPabxDialplanExtensionConditionTime> CreateTelephonyOvhpabxDialplanExtensionConditiontime(DateTime timeFrom,DateTime timeTo,OvhApi.Models.Telephony.OvhPabxDialplanExtensionConditionTimeWeekDayEnum weekDay,string billingAccount,string serviceName,long dialplanId,long extensionId)
 		{
 					if(ConsumerKey == null)
 				throw new OvhException("This request must be authenticated");
