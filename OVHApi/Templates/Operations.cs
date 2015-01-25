@@ -18298,7 +18298,7 @@ queryString.Add("type",type);
 		/// Ips associated to this virtual server
 							/// <param name="serviceName">The internal name of your VPS offer</param>
 							/// </summary>
-						public async Task<System.Net.IPAddress[]> GetVpsIps(string serviceName)
+						public async Task<string[]> GetVpsIps(string serviceName)
 		{
 					if(ConsumerKey == null)
 				throw new OvhException("This request must be authenticated");
@@ -18306,7 +18306,7 @@ queryString.Add("type",type);
 
 			
 			
-			return await RawCall<System.Net.IPAddress[]>(HttpMethod.Get,String.Format("/vps/{0}/ips",System.Net.WebUtility.UrlEncode(serviceName.ToString())));
+			return await RawCall<string[]>(HttpMethod.Get,String.Format("/vps/{0}/ips",System.Net.WebUtility.UrlEncode(serviceName.ToString())));
 		}
 				/// <summary>
 		/// Get this object properties
